@@ -1,0 +1,118 @@
+:root {
+    --clr: #fa886f;
+    --color2: rgba(217, 102, 125, 0.521);
+
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url('/todo-list/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    width: 300px;
+    height: 500px;
+    border: 2px solid var(--clr);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(206, 193, 226, 0.211);
+    overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#addNew {
+    background-color: rgb(168, 160, 208);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid var(--color2);
+}
+
+.image {
+    background-color: var(--color2);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#tasks {
+    display: grid;
+    gap: 14px;
+}
+#tasks div{
+    background-color: rgb(168, 160, 208);
+    border: 3px solid var(--color2);
+    padding: 5px;
+    border-radius: 6px;
+    display: grid;
+    gap: 4px;
+}
+
+.options {
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+}
+
+.options img {
+    cursor: pointer;
+    
+
+}
+
+#msg {
+    color: red;
+}
+
+
+
+.text-align {
+    display: grid;
+    place-items: center;
+}
+.fancy-title {
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.text-title {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+    transition: 0.1s ease;
+    transition-delay: 0.25s;
+}
+
+.hover-text {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    color: var(--clr);
+    overflow: hidden;
+    border-right: 3px solid var(--clr);
+    transition: 0.5s ease-in-out;
+
+}
+
+.fancy-title:hover .hover-text {
+    width: 105%;
+    filter: drop-shadow(0 0 40px var(--clr));
+}
+
+.fancy-title:hover .text-title {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+}
